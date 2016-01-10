@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Colors</title>
+    <script src="index.js" type="text/javascript"></script>
+    <script>
+        document.write("<h1>HSL to RGB</h1>");
+        for (var i = 0; i <= 360; i += 15) {
+            var rgb = Colors.HSLtoRGB(i, 1,.5);
+            //document.write(i);
+            document.write('<p style="color:rgb(' + rgb.R + ',' + rgb.G + ',' + rgb.B + ')")>HSV to RGB:' + JSON.stringify(rgb) + '</p>');
+        }
+        document.write("<h1>HSV to RGB</h1>");
+        for (var i = 0; i <= 360; i += 15) {
+            var rgb = Colors.HSVtoRGB(i, 1, 1);
+            //document.write(i);
+            document.write('<p style="color:rgb(' + rgb.R + ',' + rgb.G + ',' + rgb.B + ')")>HSL to RGB:' + JSON.stringify(rgb) + '</p>');
+        }
+        document.write("<h1>HSV to RGB to HEX</h1>");
+        for (var i = 0; i <= 360; i += 15) {
+            var rgb = Colors.HSVtoRGB(i, 1, 1);
+            var hex = Colors.RGBtoHEX(rgb.R, rgb.G, rgb.B);
+            //document.write(i);
+            document.write('<p style="color:' + hex + '">RGB to HEX:' + JSON.stringify(hex) + '</p>');
+        }
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
