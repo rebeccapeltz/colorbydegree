@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Wheel Colors</title>
-    <script src="index.js" type="text/javascript"></script>
+    <script src="bundle.js" type="text/javascript"></script>
     <script>
         document.write("<h1>HSL to RGB to HEX</h1>");
         for (var i = 0; i <= 360; i += 5) {
-            var rgb = Colors.HSLtoRGB(i, 1,.5);
-            var hex = Colors.RGBtoHEX(rgb.R, rgb.G, rgb.B);
+           // var rgb = HSLtoRGB(i, 1,.5);
+            //var hex = RGBtoHEX(rgb.R, rgb.G, rgb.B);
+             var hex = HSLtoHEX(i, 1,.5);
             //document.write(i);
-            document.write('<p style="color:' + hex + '">RGB to HEX:' + JSON.stringify(hex) + '</p>');
+            document.write('<p style="color:' + hex + '">RGB to HEX (' + i + ' degrees):' + JSON.stringify(hex) + '</p>');
         }
 
         document.write("<h1>RGB to HEX</h1>");
         for (var i = 0; i <= 1; i += .1) {
-            var rgb = Colors.HSVtoRGB(0, 1, i);
-            var hex = Colors.RGBtoHEX(rgb.R, rgb.G, rgb.B);
-            //document.write(i);
+            var rgb = HSVtoRGB(0, 1, i);
+            var hex = RGBtoHEX(rgb.R, rgb.G, rgb.B);
             document.write('<p style="color:' + hex + '">RGB to HEX:' + JSON.stringify(hex) + '</p>');
         }
 

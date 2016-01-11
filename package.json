@@ -1,7 +1,7 @@
 {
-  "name": "colors",
+  "name": "colorbydegree",
   "version": "1.0.0",
-  "description": "Convert to HSV to RGB",
+  "description": "Input a degree value between 0 and 360 to get the #HEX value of the color from a color wheel",
   "main": "index.js",
   "dependencies": {
     "underscore": "^1.8.3"
@@ -16,5 +16,13 @@
     "rgb"
   ],
   "author": "rebeccapeltz",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebeccapeltz/colorbydegree.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rebeccapeltz/colorbydegree/issues"
+  },
+  "homepage": "https://github.com/rebeccapeltz/colorbydegree#readme"
 }
